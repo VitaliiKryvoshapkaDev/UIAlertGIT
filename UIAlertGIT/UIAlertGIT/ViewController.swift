@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         enum Films:String{
             case film1 = "Amazing Spider Man"
             case film2 = "Upon time in Hollywood"
+            case filmHomeAlone = "Home Alone"
         }
         
         let alert = UIAlertController(title: nil, message: "Choose Film!", preferredStyle: .actionSheet)
@@ -57,6 +58,9 @@ class ViewController: UIViewController {
         
         let film2 = UIAlertAction(title: Films.film2.rawValue, style: .default, handler: handler(.film2))
         alert.addAction(film2)
+        
+        let filmHomeAlone = UIAlertAction(title: Films.filmHomeAlone.rawValue, style: .default, handler: handler(.filmHomeAlone))
+        alert.addAction(filmHomeAlone)
         
         present(alert, animated: true, completion: nil)
         
