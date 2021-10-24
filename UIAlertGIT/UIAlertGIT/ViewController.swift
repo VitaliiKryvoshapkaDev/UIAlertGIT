@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             case film1 = "Amazing Spider Man"
             case film2 = "Upon time in Hollywood"
             case filmHomeAlone = "Home Alone"
+            case filmHarryPotter = "Harry Potter"
+            case film3 = "Kill Bill"
         }
         
         let alert = UIAlertController(title: nil, message: "Choose Film!", preferredStyle: .actionSheet)
@@ -61,6 +63,12 @@ class ViewController: UIViewController {
         
         let filmHomeAlone = UIAlertAction(title: Films.filmHomeAlone.rawValue, style: .default, handler: handler(.filmHomeAlone))
         alert.addAction(filmHomeAlone)
+        
+        let filmHarryPotter = UIAlertAction(title: Films.filmHarryPotter.rawValue, style: .default, handler: handler(.filmHarryPotter))
+        alert.addAction(filmHarryPotter)
+        
+        let film3 = UIAlertAction(title: Films.film3.rawValue, style: .default, handler: handler(.film3))
+        alert.addAction(film3)
         
         present(alert, animated: true, completion: nil)
         
